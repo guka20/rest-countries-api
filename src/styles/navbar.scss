@@ -1,0 +1,19 @@
+.navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  &_child {
+    width: $width;
+    max-width: $max-width;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .dark-mode{
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+  }
+}
