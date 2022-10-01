@@ -3,6 +3,7 @@
   height: 70px;
   display: flex;
   justify-content: center;
+  @include shadow;
   &_child {
     width: $width;
     max-width: $max-width;

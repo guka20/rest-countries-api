@@ -8,6 +8,10 @@ type navbarProps = {
 };
 export const Navbar = ({ isDark, setIsDark }: navbarProps) => {
   const theme = useContext(ThemeContext);
+  const handleThemeSwitcher = () => {
+    setIsDark(!isDark);
+    localStorage.setItem("isDark", JSON.stringify(!isDark));
+  };
   return (
     <nav
       className="navbar"
@@ -15,7 +19,7 @@ export const Navbar = ({ isDark, setIsDark }: navbarProps) => {
     >
       <div className="navbar_child">
         <h2>Where in the world?</h2>{" "}
-        <div className="dark-mode" onClick={() => setIsDark(!isDark)}>
+        <div className="dark-mode" onClick={handleThemeSwitcher}>
           {isDark ? <BsMoonFill /> : <BsMoon />} Dark Mode
         </div>
       </div>
