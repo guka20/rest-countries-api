@@ -1,6 +1,6 @@
 .country-page-header {
-  width: 100%;
-  max-width: $width;
+  width: $width;
+  max-width: $max-width;
   margin-top: 60px;
   button {
     width: 120px;
@@ -13,11 +13,66 @@
     justify-content: center;
     @include shadow;
   }
+}
+.country-page-main {
+  margin-top: 50px;
+  // width: calc($width + 7%);
+  width: $width;
+  max-width: $max-width;
+  display: flex;
+  justify-content: space-between;
+  .image-section {
+    width: 40%;
+    img {
+      width: 330px;
+      height: 300px;
+    }
+  }
+  .info-section {
+    width: 60%;
+    .info-table {
+      display: flex;
+      justify-content: space-between;
+      .first-section div,
+      .second-section div {
+        font-size: 1.1rem;
+        span {
+          font-family: monospace;
+        }
+      }
+    }
+    .border-countries {
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+      .countries {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .border-country {
+          height: 25px;
+          padding: 4px 12px;
+          margin: 5px 7px;
+          border-radius: 4px;
+          @include shadow;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
   .country-page-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 10px 30px;
-    justify-content: center;
-    align-content: center;
+    flex-direction: column;
+    .info-section {
+      width: 60%;
+      .info-table {
+        display: flex;
+        flex-direction: column;
+
+        .first-section {
+          margin-bottom: 30px;
+        }
+      }
+    }
   }
 }

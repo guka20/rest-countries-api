@@ -16,7 +16,10 @@
       max-width: $max-width;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
       input {
+        margin: 10px 20px;
         width: 350px;
         padding: 10px;
         height: 40px;
@@ -36,7 +39,8 @@
 }
 
 .drop-down {
-  margin-right: 5px;
+  // margin-right: 5px;
+  margin: 10px 20px;
   width: 160px;
   position: relative;
   @include shadow;

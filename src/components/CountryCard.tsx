@@ -10,6 +10,7 @@ type CountryCardProps = {
     flags: {
       png: string;
     };
+   
   };
 };
 export const CountryCard = ({ dataObject }: CountryCardProps) => {
@@ -17,6 +18,7 @@ export const CountryCard = ({ dataObject }: CountryCardProps) => {
   const { name, population, region, capital, flags } = dataObject;
   const navigate = useNavigate();
   const countryHandle = () => {
+    console.log(dataObject);
     localStorage.setItem("countryName", JSON.stringify(dataObject));
     navigate("/country");
   };

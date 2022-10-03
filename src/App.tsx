@@ -17,6 +17,7 @@ function App() {
       : isDarkTheme === "true"
       ? setIsDark(true)
       : setIsDark(false);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <BrowserRouter>
