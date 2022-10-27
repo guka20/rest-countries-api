@@ -10,7 +10,6 @@ type CountryCardProps = {
     flags: {
       png: string;
     };
-   
   };
 };
 export const CountryCard = ({ dataObject }: CountryCardProps) => {
@@ -39,7 +38,7 @@ export const CountryCard = ({ dataObject }: CountryCardProps) => {
             <b>Region: </b> {region}
           </div>
           <div>
-            <b>Capital: </b> {capital.join(",")}
+            <b>Capital: </b> {capital?.join(",")}
           </div>
         </div>
       </div>

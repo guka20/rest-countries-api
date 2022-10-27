@@ -88,7 +88,7 @@
   .card {
     @include shadow;
     width: 300px;
-    height: 400px;
+    min-height: 400px;
     margin: 20px auto;
     cursor: pointer;
     img {

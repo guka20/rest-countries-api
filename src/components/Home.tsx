@@ -31,7 +31,7 @@ export const Home = () => {
             <input
               placeholder="Search for a country"
               type="search"
-              onChange={(e) => setSearch(e.currentTarget.value)}
+              onChange={(e) => setSearch(e.target.value)}
               style={{
                 backgroundColor: theme.secondary.bgcolor,
                 color: theme.color,
@@ -45,11 +45,11 @@ export const Home = () => {
             />
           </header>
           {loading ? (
-            <Loading/>
+            <Loading />
           ) : (
             <section className="country-cards-section">
               {data.map((l: any, index: number) => (
-                  <CountryCard key={index} dataObject={l} />
+                <CountryCard key={index} dataObject={l} />
               ))}
             </section>
           )}
